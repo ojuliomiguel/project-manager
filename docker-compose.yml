@@ -1,0 +1,12 @@
+version: "3.9"
+services: 
+  producst-manager-db:
+    volumes: 
+      - /var/lib/pg_project_manager/pgdata:/var/lib/postgresql/data
+    image: postgres
+    ports:
+      - '5479:5432'
+    environment:
+      POSTGRES_USER: julio
+      POSTGRES_PASSWORD: code42
+      POSTGRES_DB: projects_db
